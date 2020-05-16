@@ -7,7 +7,45 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:300' rel='stylesheet' type='text/css'>
+    <script type="text/javascript">
+      // Code from http://bdadam.com/blog/loading-webfonts-with-high-performance.html
+      (function(){
+          function addFont() {
+              var style = document.createElement('style');
+              style.rel = 'stylesheet';
+              document.head.appendChild(style);
+              style.textContent = localStorage.merriweatherwebfont;
+          }
+      
+          try {
+              if (localStorage.merriweatherwebfont) {
+                  // The font is in localStorage, we can load it directly
+                  addFont();
+              } else {
+                  // We have to first load the font file asynchronously
+                  var request = new XMLHttpRequest();
+                  request.open('GET', '/fonts/merriweather-regular.css', true);
+      
+                  request.onload = function() {
+                      if (request.status >= 200 && request.status < 400) {
+                          // We save the file in localStorage
+                          localStorage.merriweatherwebfont = request.responseText;
+      
+                          // ... and load the font
+                          addFont();
+                      }
+                  }
+      
+                  request.send();
+              }
+          } catch(ex) {
+              // maybe load the font synchronously for woff-capable browsers
+              // to avoid blinking on every request when localStorage is not available
+          }
+      }());
+      </script>
+
+      
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
@@ -17,15 +55,8 @@
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-          
-          <h1 class="site-description"><a href="{{ site.baseurl }}/">Hi, I'm Barry Clark, a web developer from NYC. I write about web development and how to get hired.</a></h1>
-          
-          <nav>
-            <a href="{{ site.baseurl }}/about/">About</a>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/web-developer-career-newsletter/">Newsletter</a>
-          </nav>
+          <h1 class="site-name"><a href="{{ site.baseurl }}/">Barry Clark</a></h1>
+          <h2 class="site-about-link"><a href="{{ site.baseurl }}/about/">About Me</a></h2>
         </header>
       </div>
     </div>
