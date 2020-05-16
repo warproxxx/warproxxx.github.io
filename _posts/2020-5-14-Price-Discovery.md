@@ -5,12 +5,11 @@ title: Price Discovery in Bitcoin exchange
 
 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+I applied Price Discovery and Spillover Analysis on BTC/USD data from Bitfinex, Bitmex, Bitstamp, Coinbase, HitBTC, Kraken, Poloniex, Binance, OkEx and CME futures.
 
 <!--more-->
 
-**Summary and Conclusion:**
-I applied Price Discovery and Spillover Analysis on BTC/USD data from Bitfinex, Bitmex, Bitstamp, Coinbase, HitBTC, Kraken, Poloniex, Binance, OkEx and CME futures and made the following observations:
+# Summary and Conclusion:
 
 - As of May 15, 2020, no single exchange have a extremly dominant role in leading the price. But, Bitmex Perpetual Contracts, CME Futures Contracts and OkEx Spot Market have had strongest role in determining the Bitcoin price in the current run.
 
@@ -21,16 +20,27 @@ I applied Price Discovery and Spillover Analysis on BTC/USD data from Bitfinex, 
 - The Bitcoin market today is very different than the market in 2017. Traditional financial asset class like Futures contract are having more say in where the market moves. In a sense, against the early anarchy, Bitcoin is more integrated and mainstream to traditional financial ideas. 
 
 
-**Introduction**
+# Introduction
 Explain about what they are and algos. Redirect them to the original paper for details.
 
 
 
-**Analysis**
+# Analysis
 
 <p>
 <iframe frameborder='0' scrolling='no' src='/static/price_discovery.html' class="embed-responsive-item" style="border:none; height: 605px; width: 1120px; margin-left:-200px" ></iframe> 
 </p>
+
+A full page version of this graph is available <a href="/static/price_discovery.html">here</a>
+
+I also studied spill over effect
+
+<p>
+<iframe frameborder='0' scrolling='no' src='/static/spillover.html' class="embed-responsive-item" style="border:none; height: 605px; width: 1120px; margin-left:-200px" ></iframe> 
+</p>
+
+A full page version of this graph is available <a href="/static/spillover.html">here</a>
+
 
 Show the charts here and then analyze
 

@@ -6,11 +6,11 @@ permalink: /about/
 
 
 Over the last 2 years, I have been working full time/part time on different crypto currency algorithms. Recently, I have started having some success. 
-This success is a report card from the market verifying that I know some stuffs. I am writing in this blog for two reasons:
+Now that Market has validated that I know some stuffs, I can now write. My other vested interests to write are:
 
 - I barley know any one in this space. I want to know more people and make more friends.
 
-- I want to contribute to places where I got a lot of my ideas from. 
+- I want to contribute to places where I got many of my ideas. 
 
 ### Contact me
 
