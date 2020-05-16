@@ -5,7 +5,7 @@ title: Price Discovery in Bitcoin exchange
 
 
 
-Over the last year I read some incredible books. I discovered a number of them from seeing what friends and folks I’m following are reading, so I’d like to share mine too. Here are my favorite reads from 2019, hope you find something that jumps out to you.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 <!--more-->
 
