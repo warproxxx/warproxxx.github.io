@@ -19,13 +19,24 @@ Twenty days ago on reddit I promised to explain in detail a Bitcoin price discov
 
 
 # Introduction
+Price discovery is the overall process of setting the spot price or the proper price of an asset, security, commodity, or currency. Spillover analysis is the measurement of the extent to which unexpected deviations in one exchange influences other. So in summary, Price discovery identifies the leader exchanges whose traders have defined where the price will move to while Spillover analysis measures the effect extreme events (like high price rise falls) in one exchange affects other excghanges.
 
-According to Investopedia, Price discovery is the "overall process, whether explicit or inferred, of setting the spot price or the proper price of an asset, security, commodity, or currency." And, Spillover analysis measures the extent to which unexpected deviations in one exchange influences other. So in summary, Price discovery identifies the leader exchanges whose traders have defined where the price will move to while Spillover analysis measures the effect extreme events (like high price rise falls) in one exchange effects on others. In cryptocurrencies as different exchanges operated very differently, we can know a lot about who is setting the price based on this information. 
-
-Several academics have done price discovery and spillover analysis on Bitcoin Markets before me in the past and although they have done a fantastic job as most of my analysis is built up on their work, they do not include as many exchanges as I have. Consequently, they ignoring exchanges with big impacts like Bitfinex, OkEx and Huobi. Here i define all the algorithms i have used and the sources I have got the data from. This transparency will ensure that someone else can replicate this analysis. If you have good ideas, <a href="mailto:daniel@waterbot.xyz">contact me</a> and we can discuss further or I can send you the python code I used. If there is enough interest in this measurement I can setup a live interface that provides the live value.
+Several academics have done price discovery and spillover analysis on Bitcoin Markets before me in the past and although they have done a fantastic job as most of my analysis is built up on their work, they do not include as many exchanges as I have. Consequently, they ignore exchanges with big impacts like Bitfinex, OkEx and Huobi. Next I have explained many ways of measuring them. I have tried to keep the explanations simple without going into the mathematical details. If this section isn't what you are here for, skip it. If you are interested to know more, click on link. And, if you are only interested to know about the measures I used only read the paragraphs  and .
 
 ## Price Discovery
-In 1995 Hasbrouck and Gonzalo and Granger proposed a measure for information shares (IS) and component shares (CS). Their work has been used to study Gold, Bitcoin, futures derviatives and all. Some changes has been 
+There are many ways of measuring Price Discovery and different people have used different approaches which makes different assumptions to measure price discovery. Of them, the major school of thoughts I found were:
+
+- <b><a href="https://sci-hub.tw/https://www.jstor.org/stable/2329348?seq=1">Hasbrouck (1995)</a>:</b> 
+
+- <b><a href="https://sci-hub.tw/https://www.jstor.org/stable/1392518?seq=1">Gonzalo and Granger (1995)</a>:</b> Hasbrouck and Gonzalo and Granger proposed a measure for information shares (IS) and component shares (CS). Their work has been used to study Gold, Bitcoin, futures derviatives and all. Some changes has been .
+
+- <b><a href="https://www.econstor.eu/bitstream/10419/85632/1/99032.pdf">de Jong (1999)</a>:</b>
+
+- <b><a href="https://sci-hub.tw/https://www.sciencedirect.com/science/article/abs/pii/S0927539813000340">Putniņš (2013)</a>:</b> 
+
+- <b><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3297869">De Blasis (2019)</a>:</b>
+
+I like the approach used by De Blasis. All other approaches assume that there is something called an efficient price and exchanges reflect them differently with a different reaction time and noise. I do not feel comfortable using this hypothesis in Bitcoin Markets. Speculation changes price, a whale's desire changes the price.
 
 
 ## Spillover Effect
@@ -60,3 +71,7 @@ I also studied spill over effect
 </p>
 
 A full page version of this graph is available <a href="/static/spillover.html">here</a>
+
+# Conclusion
+
+If you have good ideas, <a href="mailto:daniel@waterbot.xyz">contact me</a> and we can discuss further or I can send you the python code I used. If there is enough interest in this measurement I can setup a live interface that provides the live value.
