@@ -28,10 +28,19 @@ All this turned out to be a very good decision. My hypothesis was correct. In 2 
 
 After forward testing and verifying that there wasn't any bias, it was time to go live. Going from test to live was harder than I expected. Bitmex wss API shuts down during times of high load. And these are often times where I needed to trade. So I had to make changes in the algorithm to roll out to this. Other issues I encountered were:
 
-- 
-- 
--
+- Bitmex is really illiquid. It has no uses except testing the endpoint.
+- My algorithm had to be entered on limit. Although showing limit, it was being executed on market. Although I had thought of ideas, support helped me.
 
 
-# Conclusion
-Overall, deciding to create the algorithm the way I chose turned out to be a right choice. I haven't made much but I am certain that I will.
+
+# Conclusion and Recommendation
+
+Overall, deciding to create the algorithm the way I chose turned out to be a right choice. I haven't made much but I am certain that I will. Here are some recommendation from my expirience:
+
+- No matter how good your algorithm looks on backtest, go small. You will run into issues when you go live. Don't put all of your capital on beginning. (But I did it and there is no way I was going to put effort to such quick effort to make changes. So whatever works for you tbh.)
+
+- If you have a hypothesis, you don't need ML or something like that to find that hypothesis for you. Don't use it. If you don't have an hypothesis good luck letting a Machine find it. The best models still have issues determining if a picture is a cat. Although ML has its place if you are working for a firm, it really dosen't have a place in most individual algos. It is prone to overfitting and is slow.
+
+- Risk Management is the most important part of an algorithm.
+
+- If you can, don't use stop losses. Use some logic as an alternative for stop losses. You would suprised at how much stop triggering short moves takes place in this space.
