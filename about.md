@@ -6,7 +6,7 @@ permalink: /about/
 
 
 Over the last 2 years, I have been working full time/part time on different crypto currency algorithms. Recently, I have started having some success. 
-Now that Market has validated that I know some stuffs, I can now write. My other vested interests to write are:
+After receiving Market's validation I now know I can write. My vested interests to write are:
 
 - I barley know any one in this space. I want to know more people and make more friends.
 
