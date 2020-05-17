@@ -3,7 +3,7 @@ layout: post
 title: From Backtest to Live - An experience creating a XBTUSD Trading Algorithm on Bitmex
 ---
 
-Two months ago I decided to create a XBTUSD perpetual contract trading algorithm on Bitmex. The reasons for choosing Bitmex were:
+Two months ago I decided to create a XBTUSD perpetual contract trading algorithm on Bitmex. <!--more-->The reasons for choosing Bitmex were:
 
 - I didn't have a lot of capital. Bitmex provided plenty of leverage.
 - Bitmex provides access to all historic trades and orderbook data. There is so little you can do with just OHLCV data. I had not collected historic trades and orderbook data for other exchanges. And no exchange provided this data.
