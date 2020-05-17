@@ -23,9 +23,6 @@ All this turned out to be a very good decision. My hypothesis was correct. In 2 
 - Funding took place 4 times a day. I didn't often needed to pay this
 - The futures market are not as liquid as the perp market. I need to enter a position in set timeframe. If i enter a minute late, I lose my edge. As I was getting limits order filled more often, I would stay 0 at fees even with funding.
 
-
-# Going Live
-
 After forward testing and verifying that there wasn't any bias, it was time to go live. Going from test to live was harder than I expected. Bitmex wss API shuts down during times of high load. And these are often times where I needed to trade. So I had to make changes in the algorithm to roll out to this. Other issues I encountered were:
 
 - Bitmex is really illiquid. It has no uses except testing the endpoint.
@@ -44,3 +41,5 @@ Overall, deciding to create the algorithm the way I chose turned out to be a rig
 - Risk Management is the most important part of an algorithm.
 
 - If you can, don't use stop losses. Use some logic as an alternative for stop losses. You would suprised at how much stop triggering short moves takes place in this space.
+
+- I started with a desire to trade shit coins assuming they would be easier. But it turned out there is still a lot of alpha in XBTUSD market itself. Shitcoins aren't really worth trading if you are starting from 0 and don't have an hypothesis.
