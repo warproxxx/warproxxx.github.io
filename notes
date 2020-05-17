@@ -1,0 +1,43 @@
+Reddit:
+
+Recently there have been some posts here about peoples theories on influence of derivate markets on the price or how prices seem to be premium on bitfinex currently.
+
+I have done some research in this and I think i can contribute well to this discussion. I have collected historic data from 8 exchanges and used something called Information Share to calculate who is the price leader [1][2]. This thing is pretty well accepted academically and it has more weight than some theory and personal observation. It has been used to study price discovery in bitcoin in the past [3]
+
+So without going too much into the nerd shit, here is the Information Ratio over time https://warproxxx.github.io/price_discovery.html in different exchanges. So the higher the number, the higher the trade on that exchange has effect on the price. It is monthly data. The price data at the end of month is in black. We can make pretty interesting conclusions from this chart. Bitmex comes to the top at March, and we all know it lead the dump in March. The 2017/18 pump seems to have been started by finex and continued through trades on Binance.
+
+If there is enough interest about this, I can write in detail about how i calculated it, make a better chart, calculate at other timeframes or stuffs. I wanted to add OkEx, OkCoin and Huobi to the mix but I didn't collect their data live and don't seem to provide historic data through their API.
+
+
+Notes:
+Price discovery is the process by which new information
+is incorporated into asset prices. Given a single product traded in several markets (alternatively, given
+closely related products traded in a market), the market (or product) whose price reflects new information
+faster would be expected to play the dominant role in price discovery.
+
+Hasbrouck (1995) and Gonzalo and Granger (1995) respectively propose
+the measures of price discovery: information shares (IS) and component shares (CS)
+
+ To examine the extent to which shocks in one market account for variation in other markets we
+conduct the forecast error variance decomposition suggested by Pesaran and Shin (1998) and Diebold and
+Yilmaz (2012) to calculate the gross and net spillover effects from a given market. 13 While the MIS and CS
+indicate how each market reacts to the deviation from the long-run common trend, the spillover effects show
+how each market reacts to shocks in other markets.
+
+ shock is an unexpected or unpredictable event that affects an economy, either positively or negatively
+
+
+
+One noticeable finding is that BitMEX gives substantially more
+than receives: the spillover from BitMEX to the other exchanges is 44.25%, while that to BitMEX from
+the others is 36.00%. In other words, innovations in BitMEX influence the other exchanges more than it is
+influenced by innovations in the others, and this is reflected by the sizeable positive net spillover
+
+
+First, it has
+been widely documented that price discovery tend to occur primarily in the market with smaller trading
+costs (Booth et al., 1999; de Jong and Donders, 1998; Hsieh et al., 2008).
+
+
+short trades on BitMEX in
+particular, which are not directly possible on the spot exchanges, contribute much to its price discovery role.

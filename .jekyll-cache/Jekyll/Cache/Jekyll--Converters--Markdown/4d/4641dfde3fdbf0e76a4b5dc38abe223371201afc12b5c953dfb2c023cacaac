@@ -1,0 +1,47 @@
+I"n
+<p>Twenty days ago on reddit I promised to explain in detail a Bitcoin price discovery algorithm which explains the role played by different spot, derivates and futures market towards determining the Bitcoin Price. And although a bit late, I have now applied Price Discovery and Spillover Analysis on BTC/USD data from Bitfinex, Bitmex, Bitstamp, Coinbase, HitBTC, Kraken, Poloniex, Binance, OkEx and CME futures to Bitcoin Price data from 2016. Several academics have done this analysis before me in the past and although they have done a fantastic job as most of my analysis is built up on their work, they do not include as many exchanges as I have which leads to them ignoring exchanges with big impacts like Bitfinex, OkEx and Huobi.</p>
+
+<!--more-->
+
+<h1 id="conclusion">Conclusion:</h1>
+
+<ul>
+  <li>
+    <p>As of May 15, 2020, Bitmex and CME Contracts and have played the strongest role in determining the Bitcoin price in the current run.</p>
+  </li>
+  <li>
+    <p>Today derivative markets play a big role in determining the Bitcoin price. The fall in price conincides with an increase in price discovery role by CME contracts.</p>
+  </li>
+  <li>
+    <p>During 2017/18, USDT based Bitfinex had the extremly dominant role in starting the pump. But as the price increased, trades on US based exchanges, Coinbase, Bitstamp, Kraken played the more dominat role in leading the price up.</p>
+  </li>
+  <li>
+    <p>The Bitcoin market today is very different than the market in 2017. Traditional financial asset class like Futures contract are having more say in where the market moves. In a sense, against the early anarchy, Bitcoin is more integrated and mainstream to traditional financial ideas.</p>
+  </li>
+</ul>
+
+<h1 id="introduction">Introduction</h1>
+<p>Explain about what they are and algos. Redirect them to the original paper for details.</p>
+
+<h1 id="analysis">Analysis</h1>
+
+<p>
+<iframe frameborder="0" scrolling="no" src="/static/price_discovery.html" class="embed-responsive-item" style="border:none; height: 605px; width: 1120px; margin-left:-200px"></iframe> 
+</p>
+
+<p>A full page version of this graph is available <a href="/static/price_discovery.html">here</a></p>
+
+<p>I also studied spill over effect</p>
+
+<p>
+<iframe frameborder="0" scrolling="no" src="/static/spillover.html" class="embed-responsive-item" style="border:none; height: 605px; width: 1120px; margin-left:-200px"></iframe> 
+</p>
+
+<p>A full page version of this graph is available <a href="/static/spillover.html">here</a></p>
+
+<p>Show the charts here and then analyze</p>
+
+<p>Find which leads pumps and which lead dump etc.</p>
+
+<p>Whale intension analysis somewhere if possible.</p>
+:ET

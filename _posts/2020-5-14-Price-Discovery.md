@@ -3,15 +3,16 @@ layout: post
 title: Price Discovery in Bitcoin exchange
 ---
 
-
-
-I applied Price Discovery and Spillover Analysis on BTC/USD data from Bitfinex, Bitmex, Bitstamp, Coinbase, HitBTC, Kraken, Poloniex, Binance, OkEx and CME futures.
-
+Twenty days ago on reddit I promised to explain in detail a Bitcoin price discovery algorithm which explains the role played by different spot, derivates and futures market towards determining the Bitcoin Price. And although a bit late, I have now applied Price Discovery and Spillover Analysis on BTC/USD data from Bitfinex, Bitmex, Bitstamp, Coinbase, HitBTC, Kraken, Poloniex, Binance, OkEx and CME futures to Bitcoin Price data from 2016. 
 <!--more-->
 
-# Summary and Conclusion:
+Several academics have done this analysis before me in the past and although they have done a fantastic job as most of my analysis is built up on their work, they do not include as many exchanges as I have which leads to them ignoring exchanges with big impacts like Bitfinex, OkEx and Huobi.
 
-- As of May 15, 2020, no single exchange have a extremly dominant role in leading the price. But, Bitmex Perpetual Contracts, CME Futures Contracts and OkEx Spot Market have had strongest role in determining the Bitcoin price in the current run.
+
+
+# Conclusion:
+
+- As of May 15, 2020, Bitmex and CME Contracts and have played the strongest role in determining the Bitcoin price in the current run.
 
 - Today derivative markets play a big role in determining the Bitcoin price. The fall in price conincides with an increase in price discovery role by CME contracts.
 
