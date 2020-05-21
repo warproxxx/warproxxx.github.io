@@ -1,0 +1,16 @@
+Steps:
+
+
+1) First percentage change
+2) Then for each series we find edges. Edges divide the function into equal intervals.
+3) Then we find which edge the current value is in (for 3 edges 0 or 1 or 2) in g
+for 5 state the edges are {min,−3σ/2,−σ/2,σ/2,3σ/2,max}
+4) Then we get the probablity p. For each, we get the probablity of getting the next value same or different as current value. This is the transition matrix.
+5) Then we count frequency f
+6) Using edges g and frequency f, we calculate lambda. Lambda is just reduction.
+7) Lambda is used to get the output.
+
+
+5) Frequency:
++1 is just the value shifted.
+It seems comparing with next value.
