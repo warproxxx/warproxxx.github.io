@@ -1,0 +1,33 @@
+---
+layout: post
+title: Reflections on my first live trading algorithm
+---
+
+I got my first experience making a trading algorithm in my undergrad dissertation. I included every data I could - blockchain data, reddit data, google and wiki trends, twitter data and TA and fed the data to a ML model to get predictions. The predictions appeared good but I was never satisfied with it and never went live. In my first model I learned what was not a useful trading signal. Unless I was working in a big team most of the data I used on it were not. After my undergrad I worked full time/part time/on/off for more than a year and finished my first live algorithm named waterbot. Although profitable, I don't use the algorithm anymore.
+
+<!--more-->
+
+
+<p>
+<iframe frameborder='0' scrolling='no' src='/static/backtest_ETH.html' class="embed-responsive-item" style="border:none; height: 100vh; width: 100vw; margin-left:-33vw;" ></iframe> 
+<div style="font-size:12px; margin-left: -100px;">I hate HTML. If the chart does not look good, click <a href="/static/backtest_ETH.html">here</a> for a full page access.</div>
+</p>
+
+Initially it was made to trade all cryptocurrencies in Bitfinex. But later I switched to just Ethereum. As you can see its a pretty good algorithm. Green markers mark long and red marks short. Other tabs in the diagram contain other analysis. I created a pretty sweet interface for live visualization too:
+<img src="/static/screenshot.png">
+
+It dosen't look that good but I hate web developement and its great for me. I even created <a href="/static/historic_positions.png">this heatmap</a> showing the algo's historic positions. But the most important thing for a trading algorithm is to make money. I did not make money off this algorithm. Later I stopped using it when I made <a href="/Backtest-to-Live-Bitcoin-mex/">a better one</a>.
+
+# Developing
+Most of the longer than one year of development was spent learning various concepts and technologies, that I did not need. I thought I had to know everything before starting and wasted nearly 9-10 months in this. I tossed and developed many ideas before settling to this one. Most of them were just replications of papers. The one I settled was not written in algotrading literature. It was focused on creating a model to detect certain events and the way it calculated features and trained the model was nobel.
+
+The paper waterbot is based on used Options data. I used longs and shorts instead and applied the statistics as per the paper's recommendation. The paper used one model but I used an ensemble of basic models are retrained with data more than 15 days before. 15 days before certain events were number 1 and -1 to create the ML mode. I found that features derived from longs and shorts movement were the strongest in determining the price. So there is some edge in that data.
+
+# Going Live
+As I took the data from Bitfinex, I decided to go live in that exchange. The documentation was good, the trading and data providing engine was stable and I didn't had any issues like I later had with <a href="">Bitmex</a>. I had good "too good to be true" results and although I had spent hours looking to find issues, I hadn't been able to find. But one of trading later I did not find 
+
+After going live for a month, turned out it was actually too good to be true. I had tried hard to see if there was a bias but I had missed one. I was using the last 15 days of data i wouldn't have in live as a training. As they say, "When you make a profitable algorithm, look at what mistake you made". I had and didn't find but 1 month after going live and it not performing as expectation, I found one. But even after the bias was removed, the algo did fairly well for some time before the coronavirus crash came. My algo was long. I was using leverage. You can guess the outcome. I had read that I need logic to factor potential crisis like this or at least had a risk management system. But I thought I will only use this algo for a couple of months nothing will happen. Some days ago, I backtested again to see how it would had performed in new timelines. The algo would have recovered and made more but I had already moved to another algorithm by that time.
+
+
+# Final Thoughts
+I did not make money from this algo because of lack of patience and lack of risk management. But i gained a lot of mental wins in the development. If you are to create something that will take years to build and months to test, which can all be for nothing, you need a very strong mental foundation. Working on the algorithm has helped me become a better person and being a better person has helped me work on the algorithm. Money isn't that big of a deal by my other algorithm is getting it. Even if someday in future it stops, I will make another that will. If it does continue working as expected, I have absolutely no desire to "retire" like most algo traders I see on internet. I will expand. 

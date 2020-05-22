@@ -7,29 +7,28 @@ Twenty days ago, on Reddit, I promised to explain in detail a Bitcoin price disc
 <!--more-->
 
 # TL;DR
-I applied price discovery algorithms to 5 Min OHLCV data from Bitfinex, Bitmex, Bitstamp, Coinbase, HitBTC, Kraken, Poloniex, Binance, OkEx, and CME futures data from March 2016 to May 2020. Some interesting results I got was:
+I applied price discovery algorithms to 5 Min OHLCV data from Bitmex and CME contracts and Bitstamp, Coinbase, HitBTC, Kraken, Poloniex, Binance and OkEx BTCUSD/BTCUSDT markets from March 2016 to May 2020. Some interesting results I got was:
 
-- Before the 2017/18 bull run, Bitfinex dominated the price discovery process. They started the run. But as the price increased, trades on other exchanges contributed with Binance and Bitstamp playing a more dominant role in leading the price up. So although USDT based factors may have started the bull run natural elements kept it going. 
+- Before the 2017/18 bull run, Bitfinex dominated the price discovery process. They started the run. But as the price increased, trades on other exchanges, Binance and Bitstamp playing a more dominant role in leading the price up. 
 
-- Since then CME Contracts and Bitmex Perpetual swaps have had a increasing role in price discovery. Today Bitmex and CME Contracts play the most substantial role in determining the direction of Bitcoin price. The Bitcoin market today is very different from the market in 2017. 
+- Since then CME Contracts and Bitmex contracts have had a increasing role in price discovery. Today Bitmex and CME Contracts play the most substantial role in determining the direction of Bitcoin price. 
 
-- If we consider the influence made by both bitmex futures and perps, Bitmex leads price discovery in 936 of the 1334 days
 
 # Introduction
 Price discovery is the overall process of setting the price of an asset. Price discovery algorithms identify the leader exchanges whose traders define the price. Several academics have already done various price discovery analysis on Bitcoin Markets. And although they used nobel approaches they ignore exchanges with huge real volumes like Bitfinex, OkEx, and Huobi.
 
 There are different approaches to measure price discovery. The most popular ones are <a href="https://sci-hub.tw/https://www.jstor.org/stable/2329348?seq=1">Hasbrouck (1995)</a> and <a href="https://sci-hub.tw/https://www.jstor.org/stable/1392518?seq=1">Gonzalo and Granger (1995)</a>. <a href="https://sci-hub.tw/https://www.jstor.org/stable/2329348?seq=1">Hasbrouck (1995)</a> measures price discovery by calculating something called an efficient price. They define efficient price as the actual true price and measure discovery by measuring the variance of each exchange from the efficient price. <a href="https://sci-hub.tw/https://www.jstor.org/stable/1392518?seq=1">Gonzalo and Granger (1995)</a> does it a bit differently by decomposing the price series into components that represent the deviation from the efficient price. Both of this work have different level of noise and in an attempt to decrease the noise <a href="https://sci-hub.tw/https://www.sciencedirect.com/science/article/abs/pii/S0927539813000340">Putniņš (2013)</a> combined both of them to create a new measure. 
 
-All of the algorithms mentioned above assume cointegration, random walk, and a common efficient price. And although cointegration is a fair assumption, I do not feel comfortable assuming random walk and common efficient price in Bitcoin Markets. This is a speculation based market where significant trades cause changes. So although the measures in previous paragraphs are better studied, I use a new and little know method by <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3297869">De Blasis (2019)</a>. De Blasis assumes that "the fastest price to reflect new information releases a price signal to the other slower price series." This assumption seems fair in Bitcoin Markets. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3297869">De Blasis (2019)</a> tested their work in different futures and ETF contracts and found that the index's lead discovery in line with accepted literature adding credibility to their work.
+All of the algorithms mentioned above assume cointegration, random walk, and a common efficient price. And although cointegration is a fair assumption, I do not feel comfortable assuming random walk and common efficient price in Bitcoin Markets. This is a speculation based market where significant trades can cause change. So although the measures in previous paragraphs are better studied, I use a new and little know method by <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3297869">De Blasis (2019)</a>. De Blasis assumes that "the fastest price to reflect new information releases a price signal to the other slower price series." This assumption seems fair in Bitcoin Markets. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3297869">De Blasis (2019)</a> tested their work in different futures and ETF contracts and found that the index's lead discovery in line with accepted literature adding credibility to their work.
 
 <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3297869">De Blasis (2019)</a> uses Markov Chains to measure Price Discovery. Markov Chain is a way of modeling random processes. Without going into the mathematical details their work calculates Price Discovery using the following steps:
 
 - Data is first grouped into a daily interval. Then inside each daily interval's 5-minute candles, the change in prices between the current time t and previous time t-1 is calculated. The difference across the same time t across all exchange in a given day is juxtaposed to create an initial matrix.
 - The initial matrix is used to create a Transition Matrix, which measures the probability of price changing to something else at time t+1 for its state at t.
-- Then Markov Chain based algorithms are used to measure and influence the change at time t on an exchange had for all other exchanges' price movement at time t+1.
-- Reduction and normalization were done to data this data on each exchange to create a single number that summed to 1 for each exchange for a given day. 
+- Then Markov Chain based algorithms are used to measure and influence the change at time t on an exchange had over all other exchanges' price movement at time t+1.
+- Reduction and normalization is done to this data on each exchange to create a single number that sums to 1 for each exchange for a given day. 
 
-<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3297869">De Blasis (2019)</a> names this number Price Leadership Share (PLS). High PLS indicate a large role in price discovery. As the number sum to 1, they can be looked at as a percentage contribution. I recommend reading the <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3297869">original paper</a> if you are interested to know more about the mathetical detail.
+<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3297869">De Blasis (2019)</a> names this number Price Leadership Share (PLS). High PLS indicate a large role in price discovery. As the numbers sum to 1, they can be looked at as a percentage contribution. I recommend reading the <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3297869">original paper</a> if you are interested to know more about the mathetical detail.
 
 
 # Data
@@ -44,11 +43,6 @@ All of the algorithms mentioned above assume cointegration, random walk, and a c
 - **Bitmex:** I got Bitmex data from the <a href="https://www.bitmex.com/app/restAPI">API</a>. 
 
 Futures data are different from other data because multiple futures contract traders at the same time. I formed a single data from the multiple time series by selecting the nearest contract until it was three days from expiration. I used the next contract when the contract was three days from expiration. This approach was advocated by <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/%28SICI%291096-9934%28199909%2919%3A6%3C619%3A%3AAID-FUT1%3E3.0.CO%3B2-M">Booth et al ( 1999)</a> and and was also used by <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3353583">Alexander et al (2019)</a> in the cryptocurrency market.
-
-# Limits
-Before going in the analysis, I will add the limits for transparency:
-
-- This analysis does not include Deribit, Huobi and OkEx futures markets
 
 # Analysis
 
@@ -276,8 +270,10 @@ But it dosen't always acts the same. A yearwise correlation would be more useful
 
 This data is more explanatory than the previous one. This year Bitfinex, Huobi and OkEx, Tether based exchanges have high correlation with price increases. Bitmex has with decreases. This goes in with the theories I have been reading on reddit about how Tether based exchanges are trying to push the price up and Bitmex is pushing the price down. But concluding this would be cherry picking ignoring other years. Going back to the chart, CME dosen't seem to be influencing price in any direction. It has had high correlation with whatever direction the price went in. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3353583">Alexander et al, 2019</a> had that Bitmex was responsible for price falls more often than an increase. But in our data if we look at the <a href="/static/bitmex_dom.html">this chart</a>, Bitmex seems to be leading movement in every direction. 
 
-# Conclusion
-This conclusion was enough for to shift my focus from a <a hre="/Backtest-to-Live-Ethereum-finex/">Bitfinex based trading algorithm</a> to a <a href="/Backtest-to-Live-Bitcoin-mex/">Bitmex based one</a>. Since it has been giving me good results adding my confidence in this analysis.
+# Conclusion and Limitations
+My analysis does not include market data for other derivative exchanges like Huobi, OkEx, Binance and Deribit. So, all future market's influence may be going to Bitmex. I did not added their data because they started having an influence recently. A more fair assesment of this can be interpreting the futures market as powerful instead of Bitmex itself. But Bitmex's contribution cannot be underestimented for it dominated volume for most of time (until recently) and even brough the concept of perpetual swaps.
+
+This conclusion was enough for to shift my focus from a <a hre="/Backtest-to-Live-Ethereum-finex/">Bitfinex based trading algorithm</a> to a <a href="/Backtest-to-Live-Bitcoin-mex/">Bitmex based one</a>. Since it has been giving me good results adding my confidence in this analysis. I plan to move to other liquidity exchanges too once I need more liquidity. I that time, I can do an analysis including more exchanges. 
 
 
 
