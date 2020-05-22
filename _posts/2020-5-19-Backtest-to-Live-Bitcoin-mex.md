@@ -33,7 +33,7 @@ Some suggestions about algorithm development that would apply to any markets for
 - Risk Management is the most critical part of a good algorithm.
 - Once you go live, do not change the core logic. Looking at a 30% drawdown live feels different than a 50% drawdown in backtest.
 - Don't be afraid to use leverage. My algorithm uses high leverage. Leverage is an asset, and just like any other and how you use it matters. Unless you hold at least 6 figure USD, leverage with a consistent risk management strategy might give you better returns. If you are using leverage, it is very important that you test using leverage, including the fees during your backtest.
-- There will be slippage. In backtest assume high slippage. As I entered through limits, I assumed that I would get the one-minute later price. This turned out to be a conservative estimate because, in the last one month, I have been getting a slightly better price on average.
+- There will be slippage. In backtest assume high slippage. As I entered through limits, I assumed that I would get the one-minute later price. This turned out to be a fair estimate. In the last one month, I have been getting a slightly better price on average.
 
 After forward testing and verifying that there wasn't any bias, it was time to go live. Going from test to live was harder than I expected. Issues I ran into:
 
@@ -55,6 +55,6 @@ Overall, deciding to create the algorithm the way I chose turned out to be the r
 
 - Believe in yourself. Initially, I thought because academics have already done a lot of research, I can get an edge by combining their idea in a different market. And although I did get some edge by following their approach, I got a better edge through a hypothesis I did not read in any paper. The market is your report card. Backtests will show all that you need.
 
-- Algorithm Trading is not "make an algo once, live all your life without working." Market changes, your total capital changes, allocation strategies will need to change; hyper parameters need to be changed. You will have to make changes continuously. But if your goal is fewer working hours, you can reach there once something stable is made.
+- Algorithm Trading is not "make an algo once, live all your life without working." Market changes, your total capital changes; allocation strategies will need to change; hyper parameters need to be changed. You will have to make changes continuously. But if your goal is fewer working hours, you can reach there once something stable is made.
 
 - It would be great if your backtest framework supports live trading. Mine did not, and it caused some issues initially.
