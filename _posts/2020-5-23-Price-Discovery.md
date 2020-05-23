@@ -71,58 +71,48 @@ CME contracts were added to our analysis in February 2018. Initially, they don't
 .tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
 .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
 </style>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
 <table class="tg">
 <caption style="caption-side:bottom; font-size:12px">Table 1: Days Lead</caption>
 
+
 <thead>
   <tr>
-    <th class="tg-fymr">Exchange</th>
-    <th class="tg-fymr">Days Lead</th>
+    <th class="tg-7btt">Exchange</th>
+    <th class="tg-0pky">bitmex_futures</th>
+    <th class="tg-0pky">bitfinex</th>
+    <th class="tg-0pky">coinbase</th>
+    <th class="tg-0pky">bitmex</th>
+    <th class="tg-0pky">okex</th>
+    <th class="tg-0pky">binance</th>
+    <th class="tg-0pky">cme</th>
+    <th class="tg-0pky">bitstamp</th>
+    <th class="tg-0pky">okcoin</th>
+    <th class="tg-0pky">kraken</th>
+    <th class="tg-0pky">poloniex</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-0pky">bitmex_futures</td>
+    <td class="tg-7btt">Days Lead</td>
     <td class="tg-0pky">571</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">bitfinex</td>
     <td class="tg-0pky">501</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">coinbase</td>
     <td class="tg-0pky">102</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">bitmex</td>
     <td class="tg-0pky">88</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">okex</td>
     <td class="tg-0pky">34</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">binance</td>
     <td class="tg-0pky">12</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">cme</td>
     <td class="tg-0pky">8</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">bitstamp</td>
     <td class="tg-0pky">7</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">okcoin</td>
     <td class="tg-0pky">6</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">kraken</td>
     <td class="tg-0pky">4</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">poloniex</td>
     <td class="tg-0pky">1</td>
   </tr>
 </tbody>
