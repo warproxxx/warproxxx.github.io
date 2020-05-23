@@ -102,7 +102,7 @@ CME contracts were added to our analysis in February 2018. Initially, they don't
 </thead>
 <tbody>
   <tr>
-    <td class="tg-7btt">Days Lead</td>
+    <td class="tg-7btt"> Days</td>
     <td class="tg-0pky">571</td>
     <td class="tg-0pky">501</td>
     <td class="tg-0pky">102</td>
@@ -134,7 +134,7 @@ Out of 1334 days in the analysis, Bitmex futures leads the discovery in 571 days
 <caption style="caption-side:bottom; font-size:12px">Table 2: Correlation between the close price and Exchange's dominance index</caption>
 <thead>
   <tr>
-    <th class="tg-9j3s"></th>
+    <th class="tg-9j3s">Exchange</th>
     <th class="tg-uzvj">binance</th>
     <th class="tg-uzvj">huobi</th>
     <th class="tg-uzvj">cme</th>
@@ -152,7 +152,7 @@ Out of 1334 days in the analysis, Bitmex futures leads the discovery in 571 days
 </thead>
 <tbody>
   <tr>
-    <td class="tg-9j3s">close</td>
+    <td class="tg-9j3s">Correlation</td>
     <td class="tg-lboi">0.809190</td>
     <td class="tg-lboi">0.715667</td>
     <td class="tg-lboi">0.648058</td>
