@@ -128,7 +128,7 @@ CME contracts were added to our analysis in February 2018. Initially, they don't
 </tbody>
 </table>
 
-Out of 1277 days in the analysis, Bitmex futures leads the discovery in 571 days or nearly 44% of the duration. Bitfinex leads for 501 days. Bitfinex's high number is due to its extreme dominance in the early days. 
+Out of 1334 days in the analysis, Bitmex futures leads the discovery in 571 days or nearly 43% of the duration. Bitfinex leads for 501 days. Bitfinex's high number is due to its extreme dominance in the early days. 
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
