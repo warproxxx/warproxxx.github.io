@@ -170,7 +170,7 @@ Out of 1334 days in the analysis, Bitmex futures leads the discovery in 571 days
 </tbody>
 </table>
 
-Binance, Huobi, CME, and OkCoin had the most significant correlation with the close price. Bitmex, Coinbase, Bitfinex, and Bitstamp's dominance were negatively correlated. This was very interesting. To know more, a yearwise correlation was captured.
+Binance, Huobi, CME, and OkCoin had the most significant correlation with the close price. Bitmex, Coinbase, Bitfinex, and Bitstamp's dominance were negatively correlated. This was very interesting. To know more, I captured a yearwise correlation.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
