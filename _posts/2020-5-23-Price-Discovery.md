@@ -41,7 +41,7 @@ All of the algorithms mentioned above assume cointegration, random walk, and a c
 - **Poloniex, Bitfinex, Binance and HitBTC:** Exchange's API through <a href="https://github.com/ccxt/ccxt">CCXT</a>.
 - **Huobi:** <a href="https://huobiapi.github.io/docs/spot/v1/en/#websocket-market-data">Official Websocket Market API</a>
 - **Coinbase:** Official API using <a href="https://pypi.org/project/cbpro/">cbpro</a>
-- **Kraken, Bitstamp:** I created candles from the trade data obtained from <a href="http://api.bitcoincharts.com/v1/csv/">Bitcoincharts</a>
+- **Kraken, Bitstamp, OkCoin:** I created candles from the trade data obtained from <a href="http://api.bitcoincharts.com/v1/csv/">Bitcoincharts</a>
 - **OkEx:** <a href="https://bitdataset.com/api/">Bitdataset API</a>
 - **CME:** Okay, this was was supposed to be tricky and expensive. I broke a TOS and scraped the data for free, removing the expensive part from the equation. I will not go into detail about where I scraped this data.
 - **Bitmex:** I got Bitmex data from the <a href="https://www.bitmex.com/app/restAPI">API</a>. 
