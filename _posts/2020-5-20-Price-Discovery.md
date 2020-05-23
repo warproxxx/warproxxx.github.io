@@ -13,8 +13,12 @@ I applied price discovery algorithms to 5 Min OHLCV data from Bitmex and CME con
 
 - Since then, CME Contracts and Bitmex contracts have had an increasing role in price discovery. Today Bitmex and CME Contracts play the most substantial role in determining the direction of Bitcoin price. 
 
+- In 2020, market dominance by Bitmex has been negatively correlated with price. Dominance by Bitfinex, Huobi and OkCoin has had high positive correlation with price.
+
 
 # Introduction
+<a href="#analysis">(Skip to the analysis section if you want to avoid the theory)</a>
+
 Price discovery is the overall process of setting the price of an asset. Price discovery algorithms identify the leader exchanges whose traders define the price. Several academics have already done various price discovery analysis on Bitcoin Markets. And although they used novel approaches, they ignore exchanges with huge real volumes like Bitfinex, OkEx, and Huobi.
 
 There are different approaches to measure price discovery. The most popular ones are <a href="https://sci-hub.tw/https://www.jstor.org/stable/2329348?seq=1">Hasbrouck (1995)</a> and <a href="https://sci-hub.tw/https://www.jstor.org/stable/1392518?seq=1">Gonzalo and Granger (1995)</a>. <a href="https://sci-hub.tw/https://www.jstor.org/stable/2329348?seq=1">Hasbrouck (1995)</a> measures price discovery by calculating something called an efficient price. They define efficient price as the actual true price and measure discovery by measuring each exchange's variance from the efficient price. <a href="https://sci-hub.tw/https://www.jstor.org/stable/1392518?seq=1">Gonzalo and Granger (1995)</a> do it a bit differently by decomposing the price series into components that represent the deviation from the efficient price. Both of these work have a different level of noise and in an attempt to decrease the noise <a href="https://sci-hub.tw/https://www.sciencedirect.com/science/article/abs/pii/S0927539813000340">Putniņš (2013)</a> combined both of them to create a new measure. 
@@ -55,7 +59,7 @@ Futures data are different from other data because multiple futures contract tra
 <br/>
 In the figure above, each colored line shows the total influence the exchange had towards the discovery of Bitcoin Price on that day. Its axis is on the left. The black line shows a moving average of the bitcoin price at the close in Bitfinex for comparison. The chart was created by plotting the EMA of price and dominance with a smoothing factor of 0.1. This was done to eliminate the noise. Let's start looking from the beginning. We start with a slight Bitfinex dominance at the start. When the price starts going up, Bitfinex's influence does too. This was the time large Tether printing was attributed to the rise of price by many individuals. But Bitfinex's influence wanes down as the price starts rising (remember that the chart is an exponential moving average. Its a lagging indicator). Afterward, exchanges like Binance and Bitstamp increase their role, and there isn't any single leader in the run. So although Bitfinex may have been responsible for the initial pump trades on other exchanges were responsible for the later rally.
 
-CME contracts were added to our analysis in February 2018. Initially, they don't have much influence. On a similar work <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3383147">Alexandar and Heck (2019)</a> noted that initially CBOE contracts had more influence. CBOE later delisted Bitcoin futures so I couldn't get that data. Overall, Bitmex and CME contracts have been averaging around 50% of the role in price discovery. To make the dominance clear, look at <a href="/static/bitmex_dom.html">this chart</a> where I add Bitmex Futures and Perp contract's dominance figure to create a single dominance index. There bitmex leads 936 of the total 1334 days (Bitfinex leads 298 days and coinbase and binance get 64 and 6 days). That is a lot. One possible reason for this might be Bitmex's low trading fee. Bitmex has a very generous -0.025% maker fee and price discovery tend to occur primarily in the market with smaller trading costs (<a href="https://sci-hub.tw/10.1002/(sici)1096-9934(199909)19:6%3C619::aid-fut1%3E3.0.co;2-m">Booth et al, 1999</a>; <a href="https://sci-hub.tw/10.1002/fut.20302">Hsieh et al., 2008</a>). It may also be because our market is mature. In mature markets, futures lead the price discovery.
+CME contracts were added to our analysis in February 2018. Initially, they don't have much influence. On a similar work <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3383147">Alexandar and Heck (2019)</a> noted that initially CBOE contracts had more influence. CBOE later delisted Bitcoin futures so I couldn't get that data. Overall, Bitmex and CME contracts have been averaging around 50% of the role in price discovery. To make the dominance clear, look at <a href="/static/bitmex_dom.html" target="_blank">this chart</a> where I add Bitmex Futures and Perp contract's dominance figure to create a single dominance index. There bitmex leads 936 of the total 1334 days (Bitfinex leads 298 days and coinbase and binance get 64 and 6 days). That is a lot. One possible reason for this might be Bitmex's low trading fee. Bitmex has a very generous -0.025% maker fee and price discovery tend to occur primarily in the market with smaller trading costs (<a href="https://sci-hub.tw/10.1002/(sici)1096-9934(199909)19:6%3C619::aid-fut1%3E3.0.co;2-m">Booth et al, 1999</a>; <a href="https://sci-hub.tw/10.1002/fut.20302">Hsieh et al., 2008</a>). It may also be because our market is mature. In mature markets, futures lead the price discovery.
 
 
 <style type="text/css">
@@ -68,39 +72,63 @@ CME contracts were added to our analysis in February 2018. Initially, they don't
 .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
 </style>
 <table class="tg">
+<caption style="caption-side:bottom; font-size:12px">Table 1: Days Lead</caption>
+
 <thead>
   <tr>
     <th class="tg-fymr">Exchange</th>
-    <th class="tg-fymr">bitfinex</th>
-    <th class="tg-fymr">cme</th>
-    <th class="tg-fymr">bitmex</th>
-    <th class="tg-fymr">binance</th>
-    <th class="tg-fymr">okex</th>
-    <th class="tg-fymr">coinbase</th>
-    <th class="tg-fymr">bitstamp</th>
-    <th class="tg-fymr">poloniex</th>
-    <th class="tg-fymr">kraken</th>
-    <th class="tg-fymr">hitbtc</th>
+    <th class="tg-fymr">Days Lead</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-fymr">Days Lead<br></td>
-    <td class="tg-0pky">624</td>
-    <td class="tg-0pky">229</td>
-    <td class="tg-0pky">128</td>
-    <td class="tg-0pky">68</td>
-    <td class="tg-0pky">67</td>
-    <td class="tg-0pky">57</td>
-    <td class="tg-0pky">37</td>
+    <td class="tg-0pky">bitmex_futures</td>
+    <td class="tg-0pky">571</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">bitfinex</td>
+    <td class="tg-0pky">501</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">coinbase</td>
+    <td class="tg-0pky">102</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">bitmex</td>
+    <td class="tg-0pky">88</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">okex</td>
     <td class="tg-0pky">34</td>
-    <td class="tg-0pky">29</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">binance</td>
+    <td class="tg-0pky">12</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">cme</td>
+    <td class="tg-0pky">8</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">bitstamp</td>
+    <td class="tg-0pky">7</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">okcoin</td>
+    <td class="tg-0pky">6</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">kraken</td>
     <td class="tg-0pky">4</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">poloniex</td>
+    <td class="tg-0pky">1</td>
   </tr>
 </tbody>
 </table>
 
-Out of 1277 days in the analysis, Bitfinex leads the discovery in 624 days or nearly 50% of the duration. Although it loses control later, its dominance can be cited to its extreme dominance in the early days. 
+Out of 1277 days in the analysis, Bitmex futures leads the discovery in 571 days or nearly 44% of the duration. Bitfinex leads for 501 days. Bitfinex's high number is due to its extreme dominance in the early days. 
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -113,6 +141,7 @@ Out of 1277 days in the analysis, Bitfinex leads the discovery in 624 days or ne
 .tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
 </style>
 <table class="tg">
+<caption style="caption-side:bottom; font-size:12px">Table 2: Correlation between the close price and Exchange's dominance index</caption>
 <thead>
   <tr>
     <th class="tg-9j3s"></th>
@@ -165,6 +194,7 @@ Binance, Huobi, CME, and OkCoin had the most significant correlation with the cl
 .tg .tg-zt7h{font-weight:bold;text-align:right;vertical-align:middle}
 </style>
 <table class="tg">
+<caption style="caption-side:bottom; font-size:12px">Table 3: Yearwise Correlation between the close price and Exchange's dominance index</caption>
 <thead>
   <tr>
     <th class="tg-zt7h"></th>
@@ -297,15 +327,19 @@ Binance, Huobi, CME, and OkCoin had the most significant correlation with the cl
 </tbody>
 </table>
 
-Price movement is pretty complicated. If one factor, like a dominant exchange, could explain it, everyone would be making money trading. But I still try to make some conclusions from this data. This year Bitfinex, Huobi, and OkEx, Tether based exchanges, discovery power have shown a high correlation with the close price when the traders there become successful, price rises. When the traders there are failing, the price is falling. When Bitmex traders are getting a say, price is falling. In 2018, Bitfinex traders had a positive correlation as expected. But so did nearly all other data except CME and Bitmex Futures. There is a lot in this data, and in-depth analysis is needed to go to any conclusion. I thought of backtesting some trading logic based on this data. Still, I realized it would be full of forwarding discovery bias after having access to this data. At this moment, I will try much to interpret this chart. Make your conclusions. What do you guys think?
+Price movement is pretty complicated. If one factor, like a dominant exchange, could explain it, everyone would be making money trading. With this disclaimer out of the way, let us try to make some conclusions. This year Bitfinex, Huobi, and OkEx, Tether based exchanges, discovery power have shown a high correlation with the close price. This means that when the traders there become successful, price rises. When the traders there are failing, the price is falling. When Bitmex traders are getting a say, price is falling. I leave the interpretation of other past years to the viewer.
+
+
+
 
 # Limitations
-My analysis does not include market data for other derivative exchanges like Huobi, OkEx, Binance, and Deribit. So, all future market's influence may be going to Bitmex. I did not add their data because they started having an impact recently. A more fair assessment may be to conclude this as the new power of derivative markets instead of attributing it as the power of Bitmex. But Bitmex has dominated futures volume most of the time (until recently). And they brought the concept of perpetual swaps. So credit when credit is due.
+My analysis does not include market data for other derivative exchanges like Huobi, OkEx, Binance, and Deribit. So, all future market's influence may be going to Bitmex. I did not add their data because they started having an impact recently. A more fair assessment may be to conclude this as the new power of derivative markets instead of attributing it as the power of Bitmex. But Bitmex has dominated futures volume most of the time (until recently). And they brought the concept of perpetual swaps.
 
-This analysis was enough for to shift my focus from a Bitfinex based trading algorithm to a <a href="/Backtest-to-Live-Bitcoin-mex/">Bitmex based one</a>. It has been giving me good results. I plan to move to other derivate markets once I need more liquidity. At that time, I will analyze them too. 
+# Conclusion
+There is a lot in this data. I think there is some edge here. Someday I will backtest some trading logic based on this data. Then I will have more info and might write more. But, this analysis was enough for to shift my focus from a Bitfinex based trading algorithm to a <a href="/Backtest-to-Live-Bitcoin-mex/">Bitmex based one</a>. It has been giving me good results.
+
+<br/><br/><br/>
 
 
 
-
-
-If you have any good ideas that you want me to write about or discuss further <a href="mailto:daniel@waterbot.xyz">contact me</a>. If you are interested in this analysis <a href="mailto:daniel@waterbot.xyz">contact me</a>, and I can send the python notebooks used in this analysis. If there is enough interest in this measurement, I can setup a live interface that provides the live value.
+If you have any good ideas that you want me to write about or discuss further <a href="mailto:daniel@waterbot.xyz">contact me</a>. If you are interested in this analysis and want to discuss further leave a comment or <a href="mailto:daniel@waterbot.xyz">contact me</a>. If there is enough interest in this measurement, I can setup a live interface that provides the live value.
