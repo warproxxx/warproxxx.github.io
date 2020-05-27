@@ -33,7 +33,7 @@ Some suggestions about algorithm development that would apply to any markets for
 - Risk Management is the most critical part of a good algorithm.
 - Once you go live, do not change the core logic. Looking at a 30% drawdown live feels different than a 50% drawdown in backtest.
 - Don't be afraid to use leverage. My algorithm uses high leverage. Leverage is an asset, and just like any other and how you use it matters. Unless you hold at least 6 figure USD, leverage with a consistent risk management strategy might give you better returns. If you are using leverage, it is very important that you test using leverage, including the fees during your backtest.
-- There will be slippage. In backtest assume high slippage. As I entered through limits, I assumed that I would get the one-minute later price. This turned out to be a fair estimate. In the last one month, I have been getting a slightly better price on average.
+- There will be slippage. In backtest assume high slippage. As I entered through limits, I assumed that I would get the one-minute later price and some additional percentage slippage. This turned out to be a fair estimate. In the last one month, I have been getting a slightly better price on average.
 
 After forward testing and verifying that there wasn't any bias, it was time to go live. Going from test to live was harder than I expected. Issues I ran into:
 

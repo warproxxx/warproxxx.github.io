@@ -44,8 +44,15 @@ CME contracts were added to our analysis in February 2018. Initially, they don't
 |  Exchange 	| bitmex_futures 	| bitfinex 	| coinbase 	| bitmex 	| okex 	| binance 	| cme 	| bitstamp 	| okcoin 	| kraken 	| poloniex 	|
 |:---------:	|----------------	|----------	|----------	|--------	|------	|---------	|-----	|----------	|--------	|--------	|----------	|
 | Days Lead 	| 571            	| 501      	| 102      	| 88     	| 34   	| 12      	| 8   	| 7        	| 6      	| 4      	| 1        	|
-
+                                             Table 1: Days Lead
 
 
 Out of 1334 days in the analysis, Bitmex futures leads the discovery in 571 days or nearly 43% of the duration. Bitfinex leads for 501 days. Bitfinex's high number is due to its extreme dominance in the early days. 
 
+
+|   Exchange  	|  binance 	|   huobi  	|    cme   	|  okcoin  	| bitmex_futures 	|   okex   	|  hitbtc  	|   kraken  	|  poloniex 	|  bitstamp 	|  bitfinex 	|  coinbase 	|   bitmex  	|
+|:-----------:	|:--------:	|:--------:	|:--------:	|:--------:	|:--------------:	|:--------:	|:--------:	|:---------:	|:---------:	|:---------:	|:---------:	|:---------:	|:---------:	|
+| Correlation 	| 0.809190 	| 0.715667 	| 0.648058 	| 0.644432 	| 0.577147       	| 0.444821 	| 0.032649 	| -0.187348 	| -0.365175 	| -0.564073 	| -0.665008 	| -0.695115 	| -0.752103 	|
+                                   Table 2: Correlation between the close price and Exchange's dominance index
+
+Binance, Huobi, CME, and OkCoin had the most significant correlation with the close price. Bitmex, Coinbase, Bitfinex, and Bitstamp's dominance were negatively correlated. This was very interesting. To know more, I captured a yearwise correlation.
