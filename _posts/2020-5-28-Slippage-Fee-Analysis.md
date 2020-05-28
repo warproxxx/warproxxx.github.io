@@ -6,12 +6,12 @@ title:  Slippage and Fee analysis in BitMex
 I have completed 541 trades in BitMex since April 23 in the XBTUSD perp swap through the BitMex API. I send my order as the best limit order. If better orders come, I cancel and send it as the best order again. If I can't enter through limit orders in 1-2 minutes this way, I enter using Market Orders. The slippage and the average fee I got in my trades this way can be used by other algo traders for a rough estimate when they are backtesting their strategy. <!--more-->
 
 # TL;DR:
-Overall I got a positive slippage of 0.0115%. But this was because of 1 anomalous trade in which I got lucky. Considering trades whose slippage was within two standard deviations of the mean, I got a slippage of -0.035%. I paid a fee of 0.0115% per trade on average. Overall I overpaid 0.0465% in fees and slippage (multiplied the margin percentage) compared to the candle open.
+Overall I got a positive slippage of 0.0115%. But this was because of 1 anomalous trade in which I got lucky. Considering trades whose slippage was within two standard deviations of the mean, I got a slippage of -0.035%. I paid a fee of 0.0115% per trade on average. Overall I overpaid 0.0465% in fees and slippage (multiplied the margin percentage) compared to the candle's open when the lucky trades were removed.
 
 
 ### Disclamers:
 - This data is from a volatile time in the Bitcoin Market. The 20 day Bollinger Band width averaged to 41. In 2019, it was 32.
-- I use a mild trend following algorithm. Here mild means that the overall trend is going toward the direction but in the last few minutes when I am buying or selling, there hasn't been a big change. A trend reversal algorithm might get a better fee.
+- I use a mild trend following algorithm. Here mild means that the overall trend is going toward the direction but in the last few minutes when I am buying or selling, there hasn't been a big change. A trend reversal algorithm will get a better slip.
 - The size of my trades was fairly small. If you are trading 6 digits or more, you might get more slippage.
 
 
