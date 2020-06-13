@@ -3,7 +3,7 @@ layout: post
 title: Price Discovery in Bitcoin exchange
 ---
 
-Twenty days ago, on Reddit, I promised to explain in detail a Bitcoin price discovery algorithm. And although a bit late, I now do so.  
+sTwenty days ago, on Reddit, I promised to explain in detail a Bitcoin price discovery algorithm. And although a bit late, I now do so.  
 <!--more-->
 
 # TL;DR
