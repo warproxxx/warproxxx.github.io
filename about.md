@@ -14,4 +14,4 @@ After receiving Market's validation I now know I can write. My vested interests 
 
 ### Contact me
 
-[daniel@waterbot.xyz](mailto:daniel@waterbot.xyz)
+[n00bdan13@gmail.com](mailto:n00bdan13@gmail.com)
