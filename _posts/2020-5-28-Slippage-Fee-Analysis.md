@@ -10,7 +10,7 @@ Overall I got a positive slippage of 0.0115%. But this was because of 1 anomalou
 
 
 ### Disclamers:
-- This data is from a volatile time in the Bitcoin Market. The 20 day Bollinger Band width averaged to 41. In 2019, it was 32.
+- This data is from a volatile time in the Bitcoin Market. The 20 day volatilty averaged 41. In 2019, it was 32.
 - I use a mild trend following algorithm. Here mild means that the overall trend is going toward the direction but in the last few minutes when I am buying or selling, there hasn't been a big change. A trend reversal algorithm will get a better slip.
 - The size of my trades was fairly small. If you are trading 6 digits or more, you might get more slippage.
 
