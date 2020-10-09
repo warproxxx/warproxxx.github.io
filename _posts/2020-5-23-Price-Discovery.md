@@ -332,4 +332,4 @@ There is a lot in this data. I think there is some edge here. Someday I will bac
 
 
 
-If you have any good ideas that you want me to write about or discuss further <a href="mailto:n00bdan13@gmail.com">contact me</a>. If you are interested in this analysis and want to discuss further leave a comment or <a href="mailto:n00bdan13@gmail.com">contact me</a>. If there is enough interest in this measurement, I can setup a live interface that provides the live value.
+If you have any good ideas that you want me to write about or discuss further <a href="mailto:n00bdan13@gmail.com">contact me</a>. If you are interested in this analysis and want to discuss further leave a comment or <a href="mailto:n00bdan13@gmail.com">contact me</a>.
