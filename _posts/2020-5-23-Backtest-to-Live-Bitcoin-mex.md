@@ -29,7 +29,7 @@ All the mentioned decisions turned out to be an excellent choice. I was able to 
 Some suggestions about algorithm development that would apply to any markets for individual traders:
 
 - One algorithm cannot profit from every movement. Focus on a few moves.
-- Your algorithm does not need to be perfect. It can make mistakes often. My algorithm has a win-lose ratio of 1:4. It loses much more than it wins. But when it wins, it wins big.
+- Your algorithm does not need to be perfect. It can make mistakes often. My algorithm has a win-lose ratio of 1:4. It loses much more than it wins. But when it wins, it wins big. (EDIT: Although this logic is fine, the new iteration of my algo has more wins than losses.)
 - Risk Management is the most critical part of a good algorithm.
 - Once you go live, do not change the core logic. Looking at a 30% drawdown live feels different than a 50% drawdown in backtest.
 - Don't be afraid to use leverage. My algorithm uses high leverage. Leverage is an asset, and just like any other and how you use it matters. Unless you hold at least 6 figure USD, leverage with a consistent risk management strategy might give you better returns. If you are using leverage, it is very important that you test using leverage, including the fees during your backtest.
