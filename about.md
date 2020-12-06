@@ -5,12 +5,7 @@ permalink: /about/
 ---
 
 
-Over the last 2 years, I have been working full time/part time on different crypto currency algorithms. Recently, I have started having some success. 
-After receiving Market's validation I now know I can write. My vested interests to write are:
-
-- I barley know any one in this space. I want to know more people and make more friends.
-
-- I want to contribute to places where I got many of my ideas. 
+I have been working on different crypto currency analysis systems and trading algorithms. I started writing after receiving validation from the market on these systems.
 
 ### Contact me
 
