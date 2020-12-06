@@ -4,13 +4,16 @@ title: Dynamics behind bitcoins fall from 19.9k
 ---
 
 
-I used trade data and orderbook snapshots from 15 spot and 6 derivative exchanges in their BTC/USD and/or BTC/USDT pair to attempt to find an explanation for Bitcoin's sharp price fall from 19.9k on December 1, 2020. <!--more--> Although the observation's gist is simple - Price fell because more selling than buying took place - I found some interesting observations that indicate the dynamics behind price movements in the Bitcoin Market.
+I used trade data and orderbook snapshots from 15 spot and 6 derivative exchanges in their BTC/USD and/or BTC/USDT pair to attempt to find an explanation for Bitcoin's sharp price fall from 19.9k on December 1, 2020. <!--more-->In my analysis, I observed dynamics that told a story behind price movement in the Bitcoin Market.
 
-- At 11:10 UTC orderbook in both the bid and the ask side decreased substantially. At this time BTC price was at 19.9k. This indicated a potential breakout in either direction
+# Summary
+- At 11:10 UTC BTC price was at 19.9k. At this time orderbook in both the bid and the ask side decreased substantially. This stopped the roadblock from a potential breakout in either direction
 - For the next few minutes selling increased while buying didn't. As the orderbook had grown fickle in both directions at this point, selling pushed it to the lower side.
 - Afterwards, Liquidation was responsible for most of the sharp movement
 
-I use orderbook snapshot and trade data from the following exchanges and pairs:
+
+## Data
+I used data from the following exchanges and pairs:
 
 - **BTC-USD Spot:** Binance, BinanceUS, Bitfinex, Bitstamp, Coinbase, FTX, FTXUS, Gemini, HitBTC, Kraken
 - **BTC-USDT Spot:** Binance, Bitfinex, Bitmax, Bittrex, FTX, FTXUS, Huobi, Kraken, OKEx, Poloniex
@@ -32,13 +35,13 @@ There is plenty of information to digest in this chart. As bitcoin reached 19.9k
 I summed the amount of buying and selling that took place in every 30-second interval. Then I divided each interval's amount by the last 100 intervals' moving average to get a normalized amount. Then I plotted the 10 intervals (5 mins) moving average of the 30-second data to obtain this (all the charts below are log scaled in y-axis):
 
 <iframe frameborder='0' scrolling='no' src='/static/combined_buy_sell.html' class="embed-responsive-item" style="border:none; height: 605px; width: 1120px; margin-left:-200px; margin-bottom:-110px" ></iframe> 
-<font size=1>Chart that divides spots and derivatives <a href="/static/bitmex.html" target="_blank">here</a>. I find this to be more clear.</font>
+<font size=1>Chart that divides spots and derivatives <a href="/static/bitmex.html" target="_blank">here</a>. I find the combined to be more clear.</font>
 
 After 11:10, both buying and selling fell. But buying fell much faster than selling. I created a cumulative sum of the amount sold/brought since 11:00 UTC below to get the below chart:
 
 <iframe frameborder='0' scrolling='no' src='/static/cum_sum.html' class="embed-responsive-item" style="border:none; height: 605px; width: 1120px; margin-left:-200px; margin-bottom:-110px" ></iframe> 
 <br/>
-The increase in selling is more evident here. This increase in selling was responsible price going low.
+The increase in selling even before the fall is more evident here. This increase in selling was responsible price going low.
 
 <br/><br/>
 
@@ -53,8 +56,10 @@ Zooming in:
 
 
 
-All this information tells a story on the dynamics on play in the bitcoin market.
+All this information tells a story on the dynamics on play in the bitcoin market. In this particular case, change in orderbook depth allowed a movement to happening. Selling pushed the price low. Liquidations pushed the price lower. 
+
+Not all price movements today are like this. But we have seen how bitcoin sharply in short intervals nowadays. And this dynamic provides a small story in the trade level behind the cause of movements happening fast.
 
 
 # Final Words
-I wonder how backtesting an automatic trading system based on the orderbook change and trades assuming liquidation would perform. I am sure it would beat buy and hold if appropriately done (as I have been beating it with a more straightforward system). But unfortunately, i didn't collect this data in the past and i can't afford paying over 10k€ (kaiko charges 2k€ per exchange for the trade data, and who knows how much for the obook) for these data. Fortunately, I will have data for future movements, and with enough data, I will have a backtest, a live interface, a more sophisticated analysis focusing on trading patterns of different entities, and hopefully a live trading system for myself based on these and more someday in the future.
+I wonder how backtesting an automatic trading system based on the orderbook change and trades keeping in mind liquidation would perform. I am sure it would beat buy and hold if appropriately done (as I have been beating it with a more straightforward system). But unfortunately, I didn't collect this data in the past, and i can't afford paying over 10k€ (Kaiko charges 2k€ per exchange for the trade data, and who knows how much for the obook) for these data. Fortunately, I am collecting it now so I will have data for future movements, and with enough data, I will have better analysis and better systems in the future.
