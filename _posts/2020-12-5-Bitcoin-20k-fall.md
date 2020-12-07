@@ -20,7 +20,7 @@ I used data from the following exchanges and pairs:
 - **BTC-USD Derivative:** Bitmex, Bybit, Bittrex, FTX, Huobi, OKEx
 - **BTC-USDT Derivative:** Binance
 
-I did not use TUSD, USDC, BUSD, and EUR markets here as I found them to be too small.
+I did not use TUSD, USDC, BUSD, and EUR markets here as I found them to be too small
 
 # Orderbook
 I took a snapshot of the orderbook a few times every minute in all pairs depending on how often the orderbook changes. This way, I took more snapshots for orderbooks that change frequently and less for those who changeless. Then I calculated the orderbook depth - the amount needed for a 100$ move in both directions. Then i averaged the snapshots of the amount required for a 100$ movement in the given minute to get the average amount required for that minute for the given pair in the given exchange. Then I grouped the data into spot and derivative by adding in such pair to obtain this chart:
