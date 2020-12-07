@@ -5,6 +5,8 @@ title:  Experience creating a XBTUSD Trading Algorithm on Bitmex
 
 Two months ago, I decided to create an XBTUSD perpetual contract trading algorithm on Bitmex, a cryptocurrency derivatives market. <!--more-->The reasons for choosing Bitmex were:
 
+EDIT (2020 December): A lot of changed in this time. My system is completly different than what i wrote here. And when i wrote this bitmex dominated the derivative market volume. So bitmex meant derivative market.
+
 - I didn't have a lot of capital. Bitmex provided plenty of leverage.
 - <a href="https://public.bitmex.com/">Bitmex provides access to all historical trades and orderbook data</a>.
 - Bitmex has high liquidity.
@@ -12,7 +14,7 @@ Two months ago, I decided to create an XBTUSD perpetual contract trading algorit
 
 As I continued developing, two critical features of Bitmex ensured that this was the right choice.
 
-- Trading fees kill most algorithms. Bitmex has a very generous -0.025% maker fees. By mostly entering as a maker, I had planned to pay a net-zero fee. I was able to achieve that.
+- Trading fees kill most algorithms. Bitmex has a very generous -0.025% maker fees. By mostly entering as a maker, I had planned to pay a net-zero fee. I was able to achieve that.(EDIT: This is no longer the case either)
 - Bitmex has fantastic support. They reply instantly. And they understand what you mean immediately. The second point does not seem much, but it is. In some other exchanges, I had to explain what I said 2 or 3 times before they finally got it. In Bitmex, I have asked somewhat complicated questions about the trading mechanisms and received immediate answers. 
 
 I had learned from my previous experiences to ditch conventions and "best practices" for efficiency. This mindset caused me to make the following changes:
