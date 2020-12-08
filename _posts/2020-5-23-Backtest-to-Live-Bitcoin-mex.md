@@ -5,7 +5,7 @@ title:  Experience creating a XBTUSD Trading Algorithm on Bitmex
 
 Two months ago, I decided to create an XBTUSD perpetual contract trading algorithm on Bitmex, a cryptocurrency derivatives market. <!--more-->The reasons for choosing Bitmex were:
 
-EDIT (2020 December): A lot of changed in this time. My system is completly different than what i wrote here. And when i wrote this bitmex dominated the derivative market volume. So bitmex meant derivative market. Nearly everything has changed and this article is mostly deprecated.
+EDIT (2020 December): A lot of changed in this time. My system is completly different than what i wrote here. And when i wrote this bitmex dominated the derivative market volume. So bitmex meant derivative market. Nearly everything has changed and this article is mostly deprecated. But i won't delete this to give a idea of where i started.
 
 - I didn't have a lot of capital. Bitmex provided plenty of leverage.
 - <a href="https://public.bitmex.com/">Bitmex provides access to all historical trades and orderbook data</a>.
