@@ -55,7 +55,9 @@ This section's analysis is only based on BitMEX's liquidation data. While conclu
 From 11:20 UTC to 11:26 UTC, the bitcoin price fell from ~19800 to ~19100. 150 Million $ was traded in Bitmex at this time. Of them, 6.8 Million $ was liquidation. ~5% of all the trades during this time were liquidations. There were a total of 12 liquidations.
 
 Zooming in the massive role of liquidation gets more clear:
+
 - Bitcoin price fell ~250$ from 19808$ to 19568$ from 11:20:34 to 11:20:51 in a 17-second interval. 8% of the volume was liquidations. 5 of the 12 liquidations took place at this time.
+
 - Bitcoin price fell ~200$ from 19540$ to 19333$ from 11:25:20 to 11:25:33 in a 13-second interval. 36% of the volume was liquidations. 5 of the 12 liquidations took place at this time.
 
 This considerable proportion and liquidation occurrence in sharp movements shows how liquidations enhance trends in the bitcoin market.
