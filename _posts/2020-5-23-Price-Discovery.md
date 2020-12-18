@@ -51,7 +51,7 @@ Futures data are different from other data because multiple futures contract tra
 # Analysis
 
 <p>
-<iframe frameborder='0' scrolling='no' src='/static/price_discovery.html' class="embed-responsive-item" style="border:none; height: 605px; width: 1120px; margin-left:-200px; margin-bottom:-110px" ></iframe> 
+<iframe frameborder='0' scrolling='no' src='/static/price_discovery.html' class="embed-responsive-item" style="border:none; height: 605px; width: 1120px;" ></iframe> 
 </p>
 
 <div style="font-size:12px; margin-left: -100px;">A full-page version of this graph is available <a href="/static/price_discovery.html">here</a></div>

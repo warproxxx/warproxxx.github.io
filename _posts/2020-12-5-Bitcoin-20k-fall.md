@@ -26,7 +26,7 @@ I did not use TUSD, USDC, BUSD, and EUR markets here as I found them to be too s
 I took a snapshot of the orderbook a few times every minute in all pairs depending on how often the orderbook changes. This way, I took more snapshots for orderbooks that change frequently and less for those who changeless. Then I calculated the orderbook depth - the amount needed for a 100$ move in both directions. Then i averaged the snapshots of the amount required for a 100$ movement in the given minute to get the average amount required for that minute for the given pair in the given exchange. Then I grouped the data into spot and derivative by adding in such pair to obtain this chart
 
 <p>
-<iframe frameborder='0' scrolling='no' src='/static/100_depth.html' class="embed-responsive-item" style="border:none; height: 605px; width: 1120px; margin-left:-200px; margin-bottom:-110px" ></iframe> 
+<iframe frameborder='0' scrolling='no' src='/static/100_depth.html' class="embed-responsive-item" style="border:none; height: 605px; width: 1120px;" ></iframe> 
 </p>
 <br/><br/>
 The Red line is the sell-side, and the green line the buy-side. When the red line is higher, it means the sell-side is significant, and it is hard for the price to rise. Similarly, when the green line is significant, the buy-side is bigger. Its axis is on the left. The light blue line is close price and golden line the average price of BTC. Its axis is on the right. The depth in spot exchanges have been scaled up a bit in the chart as I think comparing spots to derivative depth 1:1 is not fair.
@@ -36,14 +36,14 @@ There is plenty of information to digest in this chart. As bitcoin reached 19.9k
 # Trades
 I summed the amount of buying and selling that took place in every 30-second interval. Then I divided each interval's amount by the last 100 intervals' moving average to get a normalized amount. Then I plotted the 10 intervals (5 mins) moving average of the 30-second data to obtain this:
 
-<iframe frameborder='0' scrolling='no' src='/static/combined_buy_sell.html' class="embed-responsive-item" style="border:none; height: 605px; width: 1120px; margin-left:-200px; margin-bottom:-110px" ></iframe> 
+<iframe frameborder='0' scrolling='no' src='/static/combined_buy_sell.html' class="embed-responsive-item" style="border:none; height: 605px; width: 1120px;" ></iframe> 
 <font size=1>Chart that divides spots and derivatives <a href="/static/bitmex.html" target="_blank">here</a>. I find the combined to be more clear.</font>
 
 The green and red line show the intensity of buying/selling. Higher green line means that buying is much higher than the average buying in the last 50 minutes. If the line is rising faster, it means buying/selling is increasing heavily. If it is falling fast, the average buying/selling is decreasing. For buying and selling, a log axis is used on the right side. For value, the orange line's axis is on the right.
 
 After 11:10, both buying and selling fell on average. But buying fell much faster than selling. I created a cumulative sum of the amount sold/brought since 11:00 UTC below to get the below chart:
 
-<iframe frameborder='0' scrolling='no' src='/static/cum_sum.html' class="embed-responsive-item" style="border:none; height: 605px; width: 1120px; margin-left:-200px; margin-bottom:-110px" ></iframe> 
+<iframe frameborder='0' scrolling='no' src='/static/cum_sum.html' class="embed-responsive-item" style="border:none; height: 605px; width: 1120px;" ></iframe> 
 <br/>
 Here the green line shows the total amount of bitcoin brought in all these exchanges, and the red shows the amount sold. Its log axis is on the left. The orange line is the price. Here it is visible that buying starts bigger than selling. But after the slight dip at 11:10, selling keeps increasing, eventually leading to a price crumble.
 
