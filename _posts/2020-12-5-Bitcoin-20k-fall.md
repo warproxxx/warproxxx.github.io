@@ -23,7 +23,7 @@ I used data from the following exchanges and pairs:
 I did not use TUSD, USDC, BUSD, and EUR markets here as I found them to be too small
 
 # Orderbook
-I took a snapshot of the orderbook a few times every minute in all pairs depending on how often the orderbook changes. This way, I took more snapshots for orderbooks that change frequently and less for those who changeless. Then I calculated the orderbook depth - the amount needed for a 100$ move in both directions. Then i averaged the snapshots of the amount required for a 100$ movement in the given minute to get the average amount required for that minute for the given pair in the given exchange. Then I grouped the data into spot and derivative by adding in such pair to obtain this chart
+I took a snapshot of the orderbook a few times every minute in all pairs depending on how often the orderbook changes. This way, I took more snapshots for orderbooks that change frequently and less for those who changeless. Then I calculated the orderbook depth - the amount needed for a 100$ move in both directions. Then i averaged the snapshots of the amount required for a 100$ movement in the given minute to get the average amount required for that minute for the given pair in the given exchange. Then I grouped the data into spot and derivative by adding in such pair to obtain this chart.
 
 <p>
 <iframe frameborder='0' scrolling='no' src='/static/100_depth.html' class="embed-responsive-item" style="border:none; height: 605px; width: 1120px;" ></iframe> 
