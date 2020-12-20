@@ -14,7 +14,7 @@ Bitcoin is a trend based market. It moves similarly for a certain amount of time
 <p>
 <iframe frameborder='0' scrolling='no' src='https://algos.parsvirilis.com/static/plot_unbiased.html' class="embed-responsive-item" style="border:none; height: 605px; width: 1120px;" ></iframe> 
 </p>
-<font size="1">The chart is available in <a href="https://algos.parsvirilis.com/static/plot_unbiased.html" target="_blank">this url</a> and it will be updated live every day at UTC 00:03 with the previous day's close data. </font>
+<font size="1">The chart is available in <a href="https://algos.parsvirilis.com/static/plot_unbiased.html" target="_blank">this url</a> and it will be updated live every day at UTC 00:03 with the previous day's close data </font>
 
 The trend line is at the bottom. Every time the trend line changes direction, a vertical line is drawn in the price chart. Through this approach, anything that lies between 2 lines is part of that trend. If the trend is smaller than 3 days, I discard it. The obtained trend groups are:
 
