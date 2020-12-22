@@ -50,7 +50,7 @@ A new trend is created when something different happens. So, if the group was cr
 | 10k_accumulation_2      	| 2020-09-12          	| 10380.98                  	| 2020-09-16 	| 10745.76    	| 3.51            	| 2020-10-11 	| 11309.66  	| 5.25        	| LONG            	| 5.25            	|
 | lift_off                	| 2020-10-07          	| 10585.37                  	| 2020-10-11 	| 11309.66    	| 6.84            	| 2020-11-27 	| 17135.02  	| 51.51       	| LONG            	| 51.51           	|
 
-While trading this way, the direction of 8/11 trend based trades was right. The wrong ones are slightly wrong while the right ones are bigly right. It returns 325% overall while buy and hold would had returned 87%. This is a very good strategy except during the accumulation trends.
+As you can see, strategy goes long when "% change at start" is positive and short when negative. While trading this way, the direction of 8/11 trend based trades was right. The wrong ones are slightly wrong while the right ones are bigly right. It returns 325% overall while buy and hold would had returned 87%. This is a very good strategy except during the accumulation trends.
 
 It works this good because bitcoin moves similarly. Some can claim a look-ahead bias in creating this. I can claim I formed the method months ago looking at the 2019 data. But, the more powerful argument against the look-ahead bias will be the test of time, which I am confident this will pass until something fundamentally changes.
 
