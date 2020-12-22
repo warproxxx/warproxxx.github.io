@@ -99,7 +99,7 @@ Here pnl is the current pnl % for the open position. loss_cap_par, long_rsi_par,
 - **rsi_long_par:** [75,80,85,90]
 - **rsi_short_par:** [5,10,15,20,25,30,35]
 
- I tried not to make this too complicated. I created this method because I have found that big trades are sometimes indicative of future movements.  RSI and loss_cap_par are used to focus on bitcoin's similar reversals. percentage_large_reversal, percentage_large, buy_percentage_large, and macd is used to focus on activities following identical trading patterns at similar times. Again, the test against cheating in rule creation will be the test of time.
+ I tried not to make this too complicated. I created this method because I have found that big trades are sometimes indicative of future movements.  RSI and loss_cap_par are used to focus on bitcoin's similar reversals. percentage_large_reversal, percentage_large, buy_percentage_large, and macd is used to focus on activities following identical trading patterns at similar times. Again, the test against cheating in rule creation will be the test of time. The rules I used is just one. I am confident you can similarly optimize other different strategies (because I have done it).
 
 I run 800 random iterations with random parameters to find the best performing parameter in the training set. Then I use that parameter in the test set whose result is below:
  
