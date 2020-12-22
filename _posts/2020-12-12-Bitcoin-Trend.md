@@ -2,7 +2,7 @@
 layout: post
 title: Trend based trading in Bitcoin
 ---
-Bitcoin has trends where it moves similarly. While inside a trend, the direction, volatility, reversals, and response to various stimuli are similar. The scope of similarity is different in different in longer and shorter timelines. I establish my own simple and replicable method for dividing trends in this post. Then I do a couple of backtests to provide credence to my initial claim and, in doing so, provide trading strategies.
+Bitcoin has trends where it moves similarly. While inside a trend, the direction, volatility, reversals, and response to various stimuli are similar. The scope of similarity is different in longer and shorter timelines. I establish a simple and replicable method for dividing trends in this post. Then I do a couple of backtests to provide credence to my initial claim and, in doing so, provide trading strategies.
 <!--more-->
 
 ## Trend Calculation
@@ -62,12 +62,12 @@ For the test here, I consider a worse than realistic fee of 0.075% per trade and
 
 For this strategy, I use 10 min OHLCV data constructed from the bitmex trade data along with:
 
-- **percentage_large:** The % of trade volume of trades whose size is bigger than 10 BTC
+- **percentage_large:** The % of trade volume of trades whose size is bigger than 10 BTC out of trades which are bigger than 500$
 - **percentage_large_reversal:** The difference between the 30 mins percentage_large mean and 240 mins percentage_large mean
 - **buy_percentage_large:** 30 mins moving average of the percentage of buy trades bigger than 10 BTC
-- **macd:** MACD on 10 min OHLCV data with 26, 12
+- **macd:** difference between the 26 and 12 candle MA on 10 min OHLCV data
 - **rsi:** 10 Min RSI on close price
-
+ 
 **Rules:**
 <div style="text-align: center">
 <textarea readonly style="width: 50vw; height: 250px;">
@@ -130,7 +130,7 @@ The good return shows that the movement is similar as we are using the best para
  
  I look at it vertically to provide comment to some interesting ones.
 
-- During the corona dump, the parameter created from the 3 days before would do good. Bullish ones obviosly do bad. But the accumulation ones hold.
+- During the corona dump, the parameter created from the 3 days before would do good. Bullish ones obviously do bad. But the accumulation ones hold.
 
 - In most accumulation trends, parameters for other accumulation trends do good.
 
@@ -152,6 +152,6 @@ As seen [here](/images/with_params.jpg) the parameters are widely different. Yet
 | 10k_accumulation_2      	| 15.79  	|
 | lift_off                	| 106.73 	|
  
-The table above shows how using parameters for one group would have performed when used in all others. If you don't change parameters, none of the parameters would have returned as good as our strategy.  But there are still some good parameters overall as the market is in a single upside trend since March. It shows that people with "bullish bias" (i would call it seeing the world as it is) would perform much better than bears who trade thinking of corona dump (-70% when the market went up 80%) or "1 month of accumulation" if they don't change (which humans find very hard to), until this long term trend stops - if it does. But one wouldn't have access to bullish parameters in the past without being bullish af, which hopefully most of /r/bitcoinmarkets is. 
+The table above shows how using parameters for one group would have performed when used in all others. If you don't change parameters, none of the parameters would have returned as good as our strategy.  But there are still some good parameters overall as the market is in a single upside trend since March. It shows that people with "bullish bias" (i would call it seeing the world as it is) would perform much better than bears who trade thinking of corona dump (-70% when the market went up 80%) or "1 month of accumulation" and will continue to until this long term trend stops - if it does. But one wouldn't have access to bullish parameters in the past without being bullish af, which hopefully most of /r/bitcoinmarkets is. 
 
-All these returns in the table above are without leverage. Traders will use leverage, and leverage brings up return a lot when done properly, as shown in my strategy above. Thus, in this long-term trend, a leveraged bullish trader with consistently sound logic have and will continue to do good. And an automated trader will perform better than most algos when he considers bullishness - completely or with hedges. Bears can do good in specific trends, but changing like that isn't really possible for nearly all human traders. Don't fight the trend.
+All these returns in the table above are without leverage. Traders will use leverage, and leverage brings up return a lot when done properly, as shown in my strategy above. Thus, in this long-term trend, a leveraged bullish trader with consistently sound logic have and will continue to do good - until the long term direction changes. And an automated trader will perform better than most algos when he considers bullishness - completely or with hedges. Bears can do good in specific trends, but changing like that isn't really possible for nearly all human traders. Don't fight the trend.
