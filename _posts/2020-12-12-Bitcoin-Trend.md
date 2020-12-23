@@ -2,7 +2,7 @@
 layout: post
 title: Trend based trading in Bitcoin
 ---
-Bitcoin has trends where it moves similarly. While inside a trend, the direction, volatility, reversals, and response to various stimuli are similar. The scope of similarity is different in longer and shorter timelines. I establish a simple and replicable method for dividing trends in this post. Then I do a couple of backtests to provide credence to my initial claim and, in doing so, provide trading strategies.
+Bitcoin has trends where it moves similarly. While inside a trend, the direction, volatility, reversals, and response to various stimuli are similar. The scope of similarity is different in longer and shorter timelines. I establish a simple and replicable method for dividing trends in this post. Then I do a couple of backtests to provide credence to my initial claim and, in doing so, provide trading strategies. <a href="https://github.com/warproxxx/Bitcoin-Trend-Trading">Github codes in this analysis here</a>
 <!--more-->
 
 ## Trend Calculation
