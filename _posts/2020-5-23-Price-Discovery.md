@@ -3,11 +3,8 @@ layout: post
 title: Price Discovery in Bitcoin exchange
 ---
 
-Twenty days ago, on Reddit, I promised to explain in detail a Bitcoin price discovery algorithm. And although a bit late, I now do so.  
-<!--more-->
-
 # TL;DR
-I applied price discovery algorithms to 5 Min OHLCV data from Bitmex and CME contracts and Bitstamp, Coinbase, HitBTC, Kraken, Poloniex, Binance, and OkEx BTCUSD/BTCUSDT markets from March 2016 to May 2020. Some exciting results I got was:
+I applied price discovery algorithms to 5 Min OHLCV data from Bitmex and CME contracts and Bitstamp, Coinbase, HitBTC, Kraken, Poloniex, Binance, and OkEx BTCUSD/BTCUSDT markets from March 2016 to May 2020 to analyze the leading bitcoin exchanges. <!--more--> Some exciting observations I made are:
 
 - Before the 2017/18 bull run, Bitfinex dominated the price discovery process. They started the run. But as the price increased, trades on other exchanges, Binance and Bitstamp played a more dominant role in leading the price up. 
 
