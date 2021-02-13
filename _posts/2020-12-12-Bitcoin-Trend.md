@@ -9,9 +9,9 @@ Bitcoin has trends where it moves similarly. While inside a trend, the direction
  Four-year cycle, [smart money chart](https://news.bitcoin.com/wp-content/uploads/2017/12/bitcoin-a-new-paradigm-696x467.jpg) are some ways people divide the market to see trends. I apply standard deviation on the daily close data of bitcoin to obtain its volatility. Then I would had applied 30-day moving average, following it with a gaussian filter with a sigma of 3 to smoothen it out. But this will cause a look-ahead bias. To prevent this, I apply gaussian filter to the 30 day moving average without giving access to the next day's data and obtain a completely unbiased trend chart:
 
 <p>
-<iframe frameborder='0' scrolling='no' src='https://daddy.parsvirilis.com/static/plot_unbiased.html' class="embed-responsive-item" style="border:none; height: 605px; width: 1120px;" ></iframe> 
+<iframe frameborder='0' scrolling='no' src='https://daddy.scfund.io/static/plot_unbiased.html' class="embed-responsive-item" style="border:none; height: 605px; width: 1120px;" ></iframe> 
 </p>
-<font size="1">The chart is available in <a href="https://daddy.parsvirilis.com/static/plot_unbiased.html" target="_blank">this url</a> and it will be updated live every day at UTC 00:03 with the previous day's close data. </font>
+<font size="1">The chart is available in <a href="https://daddy.scfund.io/static/plot_unbiased.html" target="_blank">this url</a> and it will be updated live every day at UTC 00:03 with the previous day's close data. </font>
 
 The trend line is at the bottom. Every time the trend line changes direction, a vertical line is drawn in the price chart. Through this approach, anything that lies between 2 lines is part of that trend. If the trend is smaller than 3 days, I discard it. The obtained trend groups are:
 
