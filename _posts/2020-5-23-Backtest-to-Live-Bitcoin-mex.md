@@ -12,7 +12,7 @@ Two months ago, I decided to create an XBTUSD perpetual contract trading algorit
 
 As I continued developing, two critical features of Bitmex ensured that this was the right choice.
 
-- Trading fees kill most algorithms. Bitmex has a very generous -0.025% maker fees. By mostly entering as a maker, I had planned to pay a net-zero fee. I was able to achieve that.(EDIT: This is no longer the case either)
+- Trading fees kill most algorithms. Bitmex has a very generous -0.025% maker fees. By mostly entering as a maker, I had planned to pay a net-zero fee. I was able to achieve that.
 - Bitmex has fantastic support. They reply instantly. And they understand what you mean immediately. The second point does not seem much, but it is. In some other exchanges, I had to explain what I said 2 or 3 times before they finally got it. In Bitmex, I have asked somewhat complicated questions about the trading mechanisms and received immediate answers. 
 
 I had learned from my previous experiences to ditch conventions and "best practices" for efficiency. This mindset caused me to make the following changes:
